@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://maucxto.github.io/SPA-LANDING/spa-landing/sitemap.xml

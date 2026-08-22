@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#F8F6F0">
+  <meta name="description" content="Spa AntoniRos: una forma propia de cuidar. Tratamientos personalizados y reservación directa por WhatsApp en Ciudad de México.">
+  <title>Spa AntoniRos | Una forma propia de cuidar</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <div class="intro" id="intro" aria-hidden="true">
+    <img class="intro__logo" src="assets/branding/logo-crema.png" alt="">
+  </div>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#inicio" aria-label="Spa AntoniRos, inicio">
+      <img src="assets/branding/logo-header-transparent.png" alt="Spa AntoniRos">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Abrir menú</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+      <a href="#filosofia">Filosofía</a><a href="#tratamientos">Tratamientos</a><a href="#resultados">Resultados</a><a href="#ubicacion">Ubicación</a>
+      <a class="button button--small" data-whatsapp data-message="Hola, quiero reservar una cita en Spa AntoniRos." href="#">Reservar</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="inicio" aria-label="Bienvenida">
+      <div class="hero__slides" aria-hidden="true">
+        <div class="hero__slide is-active hero__slide--one"></div>
+        <div class="hero__slide hero__slide--two"></div>
+        <div class="hero__slide hero__slide--three"></div>
+      </div>
+      <div class="hero__content reveal">
+        <p class="eyebrow">Escuchar · Observar · Cuidar</p>
+        <h1>Una forma propia<br>de cuidar.</h1>
+        <p>Cada experiencia comienza por comprender lo que necesitas.</p>
+        <div class="actions"><a class="button" data-whatsapp data-message="Hola, quiero reservar una cita en Spa AntoniRos." href="#">Reservar</a><a class="text-link" href="#tratamientos">Conocer tratamientos</a></div>
+      </div>
+      <div class="hero__status" aria-hidden="true"><span class="is-active"></span><span></span><span></span></div>
+    </section>
+
+    <section class="section value" aria-labelledby="value-title">
+      <div class="section__intro reveal"><p class="eyebrow">Cuidado personal</p><h2 id="value-title">Cada persona recibe una forma de cuidado pensada para ella.</h2></div>
+      <div class="value__grid">
+        <article class="reveal"><span>01</span><h3>Escuchamos antes de recomendar.</h3><p>Cada cuerpo, cada momento y cada objetivo son diferentes.</p></article>
+        <article class="reveal"><span>02</span><h3>Observamos antes de actuar.</h3><p>La atención se construye desde los detalles, no desde una fórmula repetida.</p></article>
+        <article class="reveal"><span>03</span><h3>Cuidamos de forma personal.</h3><p>El tratamiento se adapta a ti y a lo que quieres alcanzar.</p></article>
+      </div>
+    </section>
+
+    <section class="philosophy" id="filosofia" aria-labelledby="philosophy-title">
+      <p class="eyebrow">Nuestra filosofía</p><h2 id="philosophy-title" class="sr-only">Escuchar, observar y cuidar</h2>
+      <div class="philosophy__words"><span class="reveal">Escuchar</span><span class="reveal">Observar</span><span class="reveal">Cuidar</span></div>
+      <p class="philosophy__copy reveal">Hay formas de cuidado que se explican. Otras simplemente se sienten. Spa AntoniRos nace de una atención capaz de comprender antes de recomendar.</p>
+    </section>
+
+    <section class="section services" id="tratamientos" aria-labelledby="services-title">
+      <div class="section__intro reveal"><p class="eyebrow">Más solicitados</p><h2 id="services-title">Elige cómo quieres sentirte hoy.</h2><p>Selecciona una categoría y reserva directamente por WhatsApp.</p></div>
+      <div class="tabs" role="tablist" aria-label="Categorías de servicios">
+        <button role="tab" aria-selected="true" data-category="faciales">Tratamientos</button><button role="tab" aria-selected="false" data-category="masajes">Masajes</button><button role="tab" aria-selected="false" data-category="aparatologia">Aparatología</button><button role="tab" aria-selected="false" data-category="corporales">Corporales</button>
+      </div>
+      <div class="service-list" id="service-list" aria-live="polite"></div>
+      <div class="catalog-note reveal"><h3>Estos son nuestros tratamientos más solicitados.</h3><p>Existe un catálogo más amplio de tratamientos que se ajustan a ti, según valoración previa.</p><a class="button button--dark" data-whatsapp data-message="Hola, quiero solicitar una valoración en Spa AntoniRos." href="#">Solicitar valoración</a></div>
+    </section>
+
+    <section class="section results" id="resultados" aria-labelledby="results-title">
+      <div class="section__intro reveal"><p class="eyebrow">Resultados</p><h2 id="results-title">Cuidado que se puede sentir y observar.</h2></div>
+      <div class="media-scroll"><div class="placeholder"><span>Antes / después</span><small>Fotografía pendiente</small></div><div class="placeholder"><span>Resultado</span><small>Fotografía pendiente</small></div><div class="placeholder"><span>Experiencia</span><small>Fotografía pendiente</small></div></div>
+    </section>
+
+    <section class="section experience" id="instalaciones" aria-labelledby="experience-title">
+      <div class="experience__visual placeholder"><span>Instalaciones</span><small>Fotografía profesional pendiente</small></div>
+      <div class="experience__copy reveal"><p class="eyebrow">La experiencia</p><h2 id="experience-title">Un espacio para bajar el ritmo.</h2><p>Recepción, cabinas y detalles preparados para recibirte con calma, limpieza y atención.</p></div>
+    </section>
+
+    <section class="section testimonials" aria-labelledby="testimonials-title">
+      <div class="section__intro reveal"><p class="eyebrow">Reseñas</p><h2 id="testimonials-title">La experiencia, contada por quienes nos visitan.</h2></div>
+      <div class="testimonial-grid">
+        <article class="testimonial-card testimonial-card--featured reveal"><span class="testimonial-card__quote" aria-hidden="true">“</span><p>Espacio reservado para un testimonio real.</p><footer><span class="testimonial-card__avatar" aria-hidden="true"></span><div><strong>Testimonio pendiente</strong><small>Publicación con autorización</small></div></footer></article>
+        <article class="testimonial-card reveal"><span class="testimonial-card__quote" aria-hidden="true">“</span><p>La voz de cada persona también forma parte del cuidado.</p><footer><span class="testimonial-card__avatar" aria-hidden="true"></span><div><strong>Próximamente</strong><small>Reseña de cliente</small></div></footer></article>
+        <article class="testimonial-card reveal"><span class="testimonial-card__quote" aria-hidden="true">“</span><p>No se publicarán reseñas sin autorización.</p><footer><span class="testimonial-card__avatar" aria-hidden="true"></span><div><strong>Testimonios reales</strong><small>Sin contenido inventado</small></div></footer></article>
+      </div>
+    </section>
+
+    <section class="valuation reveal"><p class="eyebrow">Una recomendación para ti</p><h2>No tienes que saber qué tratamiento elegir.</h2><p>Cuéntanos qué necesitas. Te ayudamos a encontrar el cuidado adecuado después de una valoración previa.</p><a class="button button--dark" data-whatsapp data-message="Hola, quiero solicitar una valoración en Spa AntoniRos." href="#">Solicitar valoración</a></section>
+
+    <section class="section location" id="ubicacion" aria-labelledby="location-title">
+      <div class="location__content reveal"><p class="eyebrow">Encuéntranos</p><h2 id="location-title">Estamos en Ciudad de México.</h2><address>Av. Cuauhtémoc 967, entre Eje 5 y San Borja, Ciudad de México.</address><div class="hours"><strong>Horarios</strong><span>Lunes a viernes · 8:00 a.m. a 8:00 p.m.</span><span>Sábados · 8:00 a.m. a 3:00 p.m.</span><span>Domingos · Solo con cita</span></div><div class="actions"><a class="button button--dark" href="https://www.google.com/maps/search/?api=1&query=Av.%20Cuauht%C3%A9moc%20967%2C%20Ciudad%20de%20M%C3%A9xico" target="_blank" rel="noopener">Cómo llegar</a><a class="text-link" data-whatsapp data-message="Hola, quiero información para visitar Spa AntoniRos." href="#">WhatsApp</a></div></div>
+      <div class="map-placeholder" role="img" aria-label="Mapa pendiente de integrar"><span>Mapa</span><small>Integración pendiente</small></div>
+    </section>
+
+    <section class="final-cta"><h2>¿Listo para regalarte un momento de cuidado?</h2><a class="button" data-whatsapp data-message="Hola, quiero reservar una cita en Spa AntoniRos." href="#">Reservar por WhatsApp</a></section>
+  </main>
+
+  <footer class="footer"><img class="footer__logo" src="assets/branding/logo-footer-white-transparent.png" alt="Spa AntoniRos"><div><strong>Contacto</strong><a data-whatsapp data-message="Hola, quiero información sobre Spa AntoniRos." href="#">+52 55 6449 2530</a><span>Instagram: pendiente</span></div><div><strong>Ubicación y horarios</strong><span>Av. Cuauhtémoc 967, CDMX</span><span>Lun–Vie · 8:00 a.m.–8:00 p.m.</span><span>Sáb · 8:00 a.m.–3:00 p.m.</span><span>Dom · Solo con cita</span></div><div><strong>Pagos</strong><span>Tarjeta · Transferencia · QR · Efectivo</span><a href="#">Aviso de privacidad (pendiente)</a></div><small>© <span id="year"></span> Spa AntoniRos · BY <a class="colibrilabs-link" href="#" data-url-pending="true" aria-label="Sitio web de ColibriLabs, enlace pendiente">@COLIBRILABS</a></small></footer>
+  <script src="js/app.js" defer></script><script src="js/menu.js" defer></script><script src="js/scroll.js" defer></script><script src="js/slider.js" defer></script><script src="js/animations.js" defer></script>
+</body>
+</html>
