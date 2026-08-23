@@ -14,4 +14,4 @@ body{padding-bottom:0}.valuation .button{margin-top:2.25rem}.hours{display:flex;
 .hero__slide{background-size:cover;background-repeat:no-repeat;background-position:center}
 .hero__slide--one{background-image:url("../assets/hero/hero-01-mobile.png")}
 .hero__slide--two{background-image:url("../assets/hero/hero-02-mobile.png")}
-.hero__slide--three{background-color:#cbbcac;background-image:url("../assets/hero/hero-03-mobile.png");background-position:center var(--header-height);background-size:100% auto}
+.hero__slide--three{background-color:#cbbcac;background-image:url("../assets/hero/hero-03-mobile.png");background-position:68% top;background-size:auto 70%}
