@@ -31,3 +31,32 @@ const labels={faciales:'Tratamientos',masajes:'Masajes',aparatologia:'Aparatolog
 const list=document.getElementById('service-list');
 function renderServices(category){list.innerHTML=services[category].map((item,index)=>`<article class="service-card"><div class="service-card__top"><span class="service-card__category">${labels[category]}</span><span class="service-card__number">${String(index+1).padStart(2,'0')}</span></div><div class="service-card__art${item.image?' service-card__art--photo':''}" aria-hidden="true">${item.image?`<img src="${item.image}" alt="" loading="lazy">`:'<span></span>'}</div><h3>${item.name}</h3><div class="service-card__meta"><span>${item.duration}</span><strong>${item.price}</strong></div><a class="service-card__action" target="_blank" rel="noopener" href="${makeWhatsAppUrl('Hola, quiero reservar '+item.name+' en Spa AntoniRos.')}"><span>Reservar</span><span aria-hidden="true">↗</span></a></article>`).join('');list.scrollLeft=0}
 document.querySelectorAll('[data-category]').forEach(tab=>tab.addEventListener('click',()=>{document.querySelectorAll('[data-category]').forEach(t=>t.setAttribute('aria-selected','false'));tab.setAttribute('aria-selected','true');renderServices(tab.dataset.category)}));renderServices('faciales');
+
+const valueCarousel=document.querySelector('[data-value-carousel]');
+if(valueCarousel){
+  const mobileQuery=window.matchMedia('(max-width: 47.999rem)');
+  const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  let valueIndex=0;
+  let valueTimer;
+  const stopValueCarousel=()=>{if(valueTimer){window.clearInterval(valueTimer);valueTimer=undefined}};
+  const startValueCarousel=()=>{
+    stopValueCarousel();
+    if(!mobileQuery.matches||reducedMotion.matches)return;
+    valueTimer=window.setInterval(()=>{
+      const cards=[...valueCarousel.children];
+      if(!cards.length)return;
+      valueIndex=(valueIndex+1)%cards.length;
+      valueCarousel.scrollTo({left:cards[valueIndex].offsetLeft-valueCarousel.offsetLeft,behavior:'smooth'});
+    },4500);
+  };
+  valueCarousel.addEventListener('scroll',()=>{
+    const cards=[...valueCarousel.children];
+    if(!cards.length)return;
+    valueIndex=cards.reduce((closest,card,index)=>Math.abs(card.offsetLeft-valueCarousel.offsetLeft-valueCarousel.scrollLeft)<Math.abs(cards[closest].offsetLeft-valueCarousel.offsetLeft-valueCarousel.scrollLeft)?index:closest,0);
+  },{passive:true});
+  valueCarousel.addEventListener('pointerdown',stopValueCarousel,{passive:true});
+  valueCarousel.addEventListener('pointerup',startValueCarousel,{passive:true});
+  mobileQuery.addEventListener('change',startValueCarousel);
+  reducedMotion.addEventListener('change',startValueCarousel);
+  startValueCarousel();
+}

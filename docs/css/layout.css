@@ -15,3 +15,14 @@ body{padding-bottom:0}.valuation .button{margin-top:2.25rem}.hours{display:flex;
 .hero__slide--one{background-image:url("../assets/hero/hero-01-final.png")}
 .hero__slide--two{background-image:url("../assets/hero/hero-02-final.png")}
 .hero__slide--three{background-image:url("../assets/hero/hero-03-final.png")}
+
+/* Alignment and mobile personal-care carousel */
+.catalog-note{text-align:center}
+.catalog-note .button{display:flex;width:max-content;margin-right:auto;margin-left:auto}
+.experience__copy .eyebrow{margin-bottom:1.25rem}
+@media(max-width:47.999rem){
+  .value__grid{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;background:transparent}
+  .value__grid::-webkit-scrollbar{display:none}
+  .value .value-card{flex:0 0 calc(100% - .25rem);scroll-snap-align:center}
+  .location__content h2 span{display:block}
+}
