@@ -16,3 +16,11 @@
 }
 
 @media(min-width:48rem){.testimonial-grid{grid-template-columns:1fr}.testimonial-card{align-items:center;text-align:center;padding:3rem 4rem}.testimonial-card>p{max-width:42rem;margin-inline:auto}.testimonial-card footer{justify-content:center}.testimonial-card:nth-child(2){transform:translateX(2rem)}.testimonial-card:nth-child(2).is-active{transform:none}}
+
+/* En escritorio se conservan exactamente las fotografias horizontales aprobadas. */
+@media(min-width:48rem){
+  .hero__slide{background-size:cover;background-position:68% center}
+  .hero__slide--one{background-image:url("../assets/hero/hero-01-final.png")}
+  .hero__slide--two{background-image:url("../assets/hero/hero-02-final.png")}
+  .hero__slide--three{background-color:transparent;background-image:url("../assets/hero/hero-03-final.png")}
+}
