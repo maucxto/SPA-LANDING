@@ -5,10 +5,10 @@ document.getElementById('year').textContent=new Date().getFullYear();
 
 const services={
   faciales:[
-    {name:'Limpieza Facial',duration:'90 min',price:'$820'},
-    {name:'Rejuvenecimiento con hilos tensores tópicos',duration:'60 min',price:'$1,500'},
-    {name:'Radiofrecuencia Facial',duration:'20 min',price:'$450'},
-    {name:'Facial Whitening',duration:'60 min',price:'$970'}
+    {name:'Limpieza Facial',duration:'90 min',price:'$820',image:'assets/services/tratamiento-01-limpieza-facial-v1.png'},
+    {name:'Rejuvenecimiento con hilos tensores tópicos',duration:'60 min',price:'$1,500',image:'assets/services/tratamiento-02-hilos-tensores-topicos-v1.png'},
+    {name:'Radiofrecuencia Facial',duration:'20 min',price:'$450',image:'assets/services/tratamiento-03-radiofrecuencia-facial-v1.png'},
+    {name:'Facial Whitening',duration:'60 min',price:'$970',image:'assets/services/tratamiento-04-facial-whitening-v1.png'}
   ],
   masajes:[
     {name:'Masaje Personalizado',duration:'60 min',price:'$800 a $1,400'},
@@ -29,5 +29,5 @@ const services={
 };
 const labels={faciales:'Tratamientos',masajes:'Masajes',aparatologia:'Aparatología',corporales:'Tratamientos corporales'};
 const list=document.getElementById('service-list');
-function renderServices(category){list.innerHTML=services[category].map((item,index)=>`<article class="service-card"><div class="service-card__top"><span class="service-card__category">${labels[category]}</span><span class="service-card__number">${String(index+1).padStart(2,'0')}</span></div><div class="service-card__art" aria-hidden="true"><span></span></div><h3>${item.name}</h3><div class="service-card__meta"><span>${item.duration}</span><strong>${item.price}</strong></div><a class="service-card__action" target="_blank" rel="noopener" href="${makeWhatsAppUrl('Hola, quiero reservar '+item.name+' en Spa AntoniRos.')}"><span>Reservar</span><span aria-hidden="true">↗</span></a></article>`).join('');list.scrollLeft=0}
+function renderServices(category){list.innerHTML=services[category].map((item,index)=>`<article class="service-card"><div class="service-card__top"><span class="service-card__category">${labels[category]}</span><span class="service-card__number">${String(index+1).padStart(2,'0')}</span></div><div class="service-card__art${item.image?' service-card__art--photo':''}" aria-hidden="true">${item.image?`<img src="${item.image}" alt="" loading="lazy">`:'<span></span>'}</div><h3>${item.name}</h3><div class="service-card__meta"><span>${item.duration}</span><strong>${item.price}</strong></div><a class="service-card__action" target="_blank" rel="noopener" href="${makeWhatsAppUrl('Hola, quiero reservar '+item.name+' en Spa AntoniRos.')}"><span>Reservar</span><span aria-hidden="true">↗</span></a></article>`).join('');list.scrollLeft=0}
 document.querySelectorAll('[data-category]').forEach(tab=>tab.addEventListener('click',()=>{document.querySelectorAll('[data-category]').forEach(t=>t.setAttribute('aria-selected','false'));tab.setAttribute('aria-selected','true');renderServices(tab.dataset.category)}));renderServices('faciales');
