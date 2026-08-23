@@ -21,6 +21,8 @@
 
 @media(min-width:48rem){.footer{padding-bottom:2.5rem}}
 
+@media(min-width:48rem){.experience__visual{aspect-ratio:3/2}}
+
 /* En escritorio se conservan exactamente las fotografias horizontales aprobadas. */
 @media(min-width:48rem){
   .hero__slide{background-size:cover;background-position:68% center}
