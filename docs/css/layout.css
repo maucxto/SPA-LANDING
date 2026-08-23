@@ -26,3 +26,5 @@ body{padding-bottom:0}.valuation .button{margin-top:2.25rem}.hours{display:flex;
   .value .value-card{flex:0 0 calc(100% - .25rem);scroll-snap-align:center;border-color:var(--color-bg);box-shadow:none}
   .location__content h2 span{display:block}
 }
+
+.footer{padding-bottom:3rem}

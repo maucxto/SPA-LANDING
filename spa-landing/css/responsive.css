@@ -19,6 +19,8 @@
 
 @media(min-width:48rem){.catalog-note{width:min(100%,42rem);margin-right:auto;margin-left:auto;padding:2.5rem 3rem}}
 
+@media(min-width:48rem){.footer{padding-bottom:2.5rem}}
+
 /* En escritorio se conservan exactamente las fotografias horizontales aprobadas. */
 @media(min-width:48rem){
   .hero__slide{background-size:cover;background-position:68% center}
