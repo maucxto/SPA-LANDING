@@ -23,6 +23,6 @@ body{padding-bottom:0}.valuation .button{margin-top:2.25rem}.hours{display:flex;
 @media(max-width:47.999rem){
   .value__grid{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;background:transparent}
   .value__grid::-webkit-scrollbar{display:none}
-  .value .value-card{flex:0 0 calc(100% - .25rem);scroll-snap-align:center}
+  .value .value-card{flex:0 0 calc(100% - .25rem);scroll-snap-align:center;border-color:var(--color-bg);box-shadow:none}
   .location__content h2 span{display:block}
 }
