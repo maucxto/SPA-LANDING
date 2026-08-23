@@ -12,3 +12,5 @@
   .valuation>p:not(.eyebrow){max-width:48rem}
   .experience__copy h2,.location__content h2{max-width:34rem}
 }
+
+@media(min-width:48rem){.testimonial-grid{grid-template-columns:1fr}.testimonial-card:nth-child(2){transform:translateX(2rem)}.testimonial-card:nth-child(2).is-active{transform:none}}
