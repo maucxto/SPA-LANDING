@@ -22,9 +22,9 @@ const services={
     {name:'Criolipólisis',duration:'45 min por sesión',price:'$1,800',image:'assets/services/aparatologia-03-criolipolisis-final.png'}
   ],
   corporales:[
-    {name:'Anticelulitis',duration:'20 a 45 min',price:'$500 a $1,200'},
-    {name:'Reductivo Manual',duration:'40 min',price:'$850 por zona'},
-    {name:'Mesoterapia',duration:'14 min',price:'10 sesiones sugeridas'}
+    {name:'Anticelulitis',duration:'20 a 45 min',price:'$500 a $1,200',image:'assets/services/corporal-01-anticelulitis-final.png'},
+    {name:'Reductivo Manual',duration:'40 min',price:'$850 por zona',image:'assets/services/corporal-02-reductivo-manual-final.png'},
+    {name:'Mesoterapia',duration:'14 min',price:'10 sesiones sugeridas',image:'assets/services/corporal-03-mesoterapia-final.png'}
   ],
 };
 const labels={faciales:'Tratamientos',masajes:'Masajes',aparatologia:'Aparatología',corporales:'Tratamientos corporales'};
