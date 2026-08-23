@@ -27,13 +27,13 @@ const flyIntroLogo=()=>{
   ],{duration:850,easing:'cubic-bezier(.42,0,1,1)',fill:'forwards'});
 
   flight.finished.then(()=>{
-    introLogo.style.opacity='0';
+    flight.cancel();
     finishIntro();
   }).catch(finishIntro);
 };
 
 if(reduce||sessionStorage.getItem('spa-antoniros-intro'))finishIntro();
-else window.setTimeout(flyIntroLogo,2850);
+else window.setTimeout(flyIntroLogo,1600);
 
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.14});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
