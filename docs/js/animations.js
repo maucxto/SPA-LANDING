@@ -27,12 +27,8 @@ const flyIntroLogo=()=>{
   ],{duration:850,easing:'cubic-bezier(.42,0,1,1)',fill:'forwards'});
 
   flight.finished.then(()=>{
-    headerLogo.classList.add('is-receiving');
     introLogo.style.opacity='0';
-    window.setTimeout(()=>{
-      headerLogo.classList.remove('is-receiving');
-      finishIntro();
-    },220);
+    finishIntro();
   }).catch(finishIntro);
 };
 
