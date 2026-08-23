@@ -12,6 +12,6 @@ body{padding-bottom:0}.valuation .button{margin-top:2.25rem}.hours{display:flex;
 .testimonial-carousel{max-width:54rem;margin-inline:auto}.testimonial-grid{display:grid}.testimonial-card{grid-area:1/1;min-height:19rem;opacity:0;visibility:hidden;transform:translateX(2rem);pointer-events:none;transition:opacity .55s var(--ease),transform .55s var(--ease),visibility .55s}.testimonial-card.is-active{opacity:1;visibility:visible;transform:none;pointer-events:auto}.testimonial-card>p{font-size:clamp(1.15rem,2.2vw,1.55rem)}.testimonial-dots{display:flex;justify-content:center;gap:.55rem;margin-top:1.5rem}.testimonial-dots button{width:.65rem;height:.65rem;padding:0;border:0;border-radius:50%;background:rgba(23,59,59,.25);cursor:pointer;transition:width .25s,background .25s}.testimonial-dots button.is-active{width:2rem;border-radius:999px;background:var(--color-black)}
 /* Fotografias finales del hero: facial, ambiente y masaje. */
 .hero__slide{background-size:cover;background-repeat:no-repeat;background-position:center}
-.hero__slide--one{background-image:url("../assets/hero/hero-01-mobile.png")}
-.hero__slide--two{background-image:url("../assets/hero/hero-02-mobile.png")}
-.hero__slide--three{background-color:#cbbcac;background-image:url("../assets/hero/hero-03-mobile.png");background-position:68% top;background-size:auto 70%}
+.hero__slide--one{background-image:url("../assets/hero/hero-01-final.png")}
+.hero__slide--two{background-image:url("../assets/hero/hero-02-final.png")}
+.hero__slide--three{background-image:url("../assets/hero/hero-03-final.png")}
