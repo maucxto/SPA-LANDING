@@ -11,10 +11,10 @@ const services={
     {name:'Facial Whitening',duration:'60 min',price:'$970',image:'assets/services/tratamiento-04-facial-whitening-v1.png'}
   ],
   masajes:[
-    {name:'Masaje Personalizado',duration:'60 min',price:'$800 a $1,400'},
-    {name:'Drenaje Linfático',duration:'60 min',price:'$830'},
-    {name:'Tratamiento Posquirúrgico',duration:'20 a 45 min',price:'$200 a $800'},
-    {name:'Masaje Descontracturante',duration:'60 min',price:'$1,200'}
+    {name:'Masaje Personalizado',duration:'60 min',price:'$800 a $1,400',image:'assets/services/masaje-01-personalizado-v1.png'},
+    {name:'Drenaje Linfático',duration:'60 min',price:'$830',image:'assets/services/masaje-02-drenaje-linfatico-v1.png'},
+    {name:'Tratamiento Posquirúrgico',duration:'20 a 45 min',price:'$200 a $800',image:'assets/services/masaje-03-posquirurgico-v1.png'},
+    {name:'Masaje Descontracturante',duration:'60 min',price:'$1,200',image:'assets/services/masaje-04-descontracturante-v1.png'}
   ],
   aparatologia:[
     {name:'Cavitación',duration:'20 min por zona',price:'$300'},
