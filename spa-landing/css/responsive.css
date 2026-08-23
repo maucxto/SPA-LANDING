@@ -9,7 +9,8 @@
   .section__intro{max-width:66rem}
   .section__intro>p:last-child{max-width:46rem}
   .valuation h2{max-width:68rem}
-  .valuation>p:not(.eyebrow){max-width:48rem}
+  .valuation>p:not(.eyebrow){max-width:none;white-space:nowrap}
+  .philosophy__copy{max-width:52rem}
   .experience__copy h2,.location__content h2{max-width:34rem}
 }
 
