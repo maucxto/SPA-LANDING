@@ -17,9 +17,9 @@ const services={
     {name:'Masaje Descontracturante',duration:'60 min',price:'$1,200',image:'assets/services/masaje-01-personalizado-v1.png'}
   ],
   aparatologia:[
-    {name:'Cavitación',duration:'20 min por zona',price:'$300'},
-    {name:'Vacuum Terapia',duration:'15 min por zona',price:'$450'},
-    {name:'Criolipólisis',duration:'45 min por sesión',price:'$1,800'}
+    {name:'Cavitación',duration:'20 min por zona',price:'$300',image:'assets/services/aparatologia-01-cavitacion-final.png'},
+    {name:'Vacuum Terapia',duration:'15 min por zona',price:'$450',image:'assets/services/aparatologia-02-vacuum-terapia-final.png'},
+    {name:'Criolipólisis',duration:'45 min por sesión',price:'$1,800',image:'assets/services/aparatologia-03-criolipolisis-final.png'}
   ],
   corporales:[
     {name:'Anticelulitis',duration:'20 a 45 min',price:'$500 a $1,200'},
