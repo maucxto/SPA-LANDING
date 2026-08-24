@@ -29,8 +29,24 @@ const services={
 };
 const labels={faciales:'Tratamientos',masajes:'Masajes',aparatologia:'Aparatología',corporales:'Tratamientos corporales'};
 const list=document.getElementById('service-list');
-function renderServices(category){list.innerHTML=services[category].map((item,index)=>`<article class="service-card"><div class="service-card__top"><span class="service-card__category">${labels[category]}</span><span class="service-card__number">${String(index+1).padStart(2,'0')}</span></div><div class="service-card__art${item.image?' service-card__art--photo':''}" aria-hidden="true">${item.image?`<img src="${item.image}" alt="" loading="lazy">`:'<span></span>'}</div><h3>${item.name}</h3><div class="service-card__meta"><span>${item.duration}</span><strong>${item.price}</strong></div><a class="service-card__action" target="_blank" rel="noopener" href="${makeWhatsAppUrl('Hola, quiero reservar '+item.name+' en Spa AntoniRos.')}"><span>Reservar</span><span aria-hidden="true">↗</span></a></article>`).join('');list.scrollLeft=0}
+const serviceId=name=>name.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+function renderServices(category){list.innerHTML=services[category].map((item,index)=>`<article class="service-card" id="${serviceId(item.name)}"><div class="service-card__top"><span class="service-card__category">${labels[category]}</span><span class="service-card__number">${String(index+1).padStart(2,'0')}</span></div><div class="service-card__art${item.image?' service-card__art--photo':''}" aria-hidden="true">${item.image?`<img src="${item.image}" alt="" loading="lazy">`:'<span></span>'}</div><h3>${item.name}</h3><div class="service-card__meta"><span>${item.duration}</span><strong>${item.price}</strong></div><a class="service-card__action" target="_blank" rel="noopener" href="${makeWhatsAppUrl('Hola, quiero reservar '+item.name+' en Spa AntoniRos.')}"><span>Reservar</span><span aria-hidden="true">↗</span></a></article>`).join('');list.scrollLeft=0}
 document.querySelectorAll('[data-category]').forEach(tab=>tab.addEventListener('click',()=>{document.querySelectorAll('[data-category]').forEach(t=>t.setAttribute('aria-selected','false'));tab.setAttribute('aria-selected','true');renderServices(tab.dataset.category)}));renderServices('faciales');
+
+document.querySelectorAll('[data-service-target]').forEach(link=>link.addEventListener('click',event=>{
+  event.preventDefault();
+  const category=link.dataset.serviceCategory;
+  const tab=document.querySelector(`[data-category="${category}"]`);
+  document.querySelectorAll('[data-category]').forEach(item=>item.setAttribute('aria-selected','false'));
+  if(tab) tab.setAttribute('aria-selected','true');
+  renderServices(category);
+  requestAnimationFrame(()=>{
+    const target=document.getElementById(link.dataset.serviceTarget);
+    if(!target) return;
+    target.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center',inline:'center'});
+    history.replaceState(null,'',`#${link.dataset.serviceTarget}`);
+  });
+}));
 
 const valueCarousel=document.querySelector('[data-value-carousel]');
 if(valueCarousel){
