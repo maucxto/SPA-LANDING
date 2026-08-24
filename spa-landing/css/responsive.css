@@ -25,6 +25,8 @@
 
 @media(min-width:48rem){.experience__visual{aspect-ratio:3/2}}
 
+@media(min-width:48rem){.result-card{aspect-ratio:6/5}}
+
 /* En escritorio se conservan exactamente las fotografias horizontales aprobadas. */
 @media(min-width:48rem){
   .hero__slide{background-size:cover;background-position:68% center}
